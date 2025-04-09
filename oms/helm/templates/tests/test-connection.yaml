@@ -1,0 +1,16 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: "{{ include "django.fullname" . }}-test-connection"
+  namespace: {{ .Values.namespace }}
+  labels:
+{{ include "django.labels" . | nindent 4 }}
+  annotations:
+    "helm.sh/hook": test-success
+spec:
+  containers:
+    - name: wget
+      image: busybox
+      command: ['wget']
+      args:  ['{{ include "django.fullname" . }}:{{ .Values.serviceWeb.port }}']
+  restartPolicy: Never

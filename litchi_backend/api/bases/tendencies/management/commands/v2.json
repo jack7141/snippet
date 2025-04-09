@@ -1,0 +1,201 @@
+{
+  "questions": [
+    {
+      "no": 1,
+      "question": "투자 (주식, 펀드 등) 경험 기간은 얼마나 되시나요?",
+      "options": [
+        {
+          "answer": "경험없음",
+          "score": 16
+        },
+        {
+          "answer": "6개월 미만",
+          "score": 17
+        },
+        {
+          "answer": "1년 미만",
+          "score": 18
+        },
+        {
+          "answer": "2년 미만",
+          "score": 19
+        },
+        {
+          "answer": "2년 이상",
+          "score": 20
+        }
+      ]
+    },
+    {
+      "no": 2,
+      "question": "투자에 대한 태도는 어떠신가요?",
+      "options": [
+        {
+          "answer": "투자수익보다 원금보존이 중요",
+          "score": 16
+        },
+        {
+          "answer": "원금보존보다 투자수익이 중요",
+          "score": 18
+        },
+        {
+          "answer": "위험이 있더라도 높은 투자수익이 중요",
+          "score": 19
+        }
+      ]
+    },
+    {
+      "no": 3,
+      "question": "투자시 손실은 어느정도까지 견딜 수 있나요?",
+      "options": [
+        {
+          "answer": "손실은 감수 할 수 없음",
+          "score": 16
+        },
+        {
+          "answer": "최소한의 손실만을 감수",
+          "score": 18
+        },
+        {
+          "answer": "일부의 손실은 감수",
+          "score": 19
+        },
+        {
+          "answer": "기대수익이 높다면 높은 손실도 감수",
+          "score": 20
+        }
+      ]
+    },
+    {
+      "no": 4,
+      "question": "투자 기간을 얼마나 생각하고 있나요?",
+      "options": [
+        {
+          "answer": "6개월 미만",
+          "score": 4
+        },
+        {
+          "answer": "1년 미만",
+          "score": 6
+        },
+        {
+          "answer": "2년 미만",
+          "score": 8
+        },
+        {
+          "answer": "3년 미만",
+          "score": 9
+        },
+        {
+          "answer": "3년 이상",
+          "score": 10
+        }
+      ]
+    },
+    {
+      "no": 5,
+      "question": "연령대는 어떻게 되시나요?",
+      "options": [
+        {
+          "answer": "20대",
+          "score": 8
+        },
+        {
+          "answer": "30대",
+          "score": 10
+        },
+        {
+          "answer": "40대",
+          "score": 9
+        },
+        {
+          "answer": "50대",
+          "score": 6
+        },
+        {
+          "answer": "60대 이상",
+          "score": 4
+        }
+      ]
+    },
+    {
+      "no": 6,
+      "question": "월소득은 어느정도 인가요?",
+      "options": [
+        {
+          "answer": "100만원 이하",
+          "score": 2
+        },
+        {
+          "answer": "200만원 이하",
+          "score": 5
+        },
+        {
+          "answer": "300만원 이하",
+          "score": 8
+        },
+        {
+          "answer": "400만원 이하",
+          "score": 9
+        },
+        {
+          "answer": "400만원 초과",
+          "score": 10
+        }
+      ]
+    },
+    {
+      "no": 7,
+      "question": "총 자산에서 금융 자산은 어느 정도인가요?",
+      "options": [
+        {
+          "answer": "5% 이하",
+          "score": 6
+        },
+        {
+          "answer": "10% 이내",
+          "score": 7
+        },
+        {
+          "answer": "20% 이내",
+          "score": 8
+        },
+        {
+          "answer": "30% 이내",
+          "score": 9
+        },
+        {
+          "answer": "30% 초과",
+          "score": 10
+        }
+      ]
+    }
+  ],
+  "score_ranges": [
+    {
+      "start": 0,
+      "end": 67,
+      "risk_type": 0
+    },
+    {
+      "start": 68,
+      "end": 73,
+      "risk_type": 1
+    },
+    {
+      "start": 74,
+      "end": 79,
+      "risk_type": 2
+    },
+    {
+      "start": 80,
+      "end": 85,
+      "risk_type": 3
+    },
+    {
+      "start": 86,
+      "end": 200,
+      "risk_type": 4
+    }
+  ]
+}

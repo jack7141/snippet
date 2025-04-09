@@ -1,0 +1,17 @@
+.git
+.gitignore
+.idea
+.DS_Store
+.dockerignore
+__pycache__/
+docker-compose.yml
+Dockerfile
+common/docker-compose/mysql
+apps/
+media/
+logs/
+*/db.sqlite3
+venv/
+
+secrets.json
+test/

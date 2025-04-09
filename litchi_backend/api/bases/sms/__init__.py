@@ -1,0 +1,1 @@
+default_app_config = 'api.bases.sms.apps.SmsConfig'

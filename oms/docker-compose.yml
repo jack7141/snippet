@@ -1,0 +1,45 @@
+version: "3"
+
+services:
+  server:
+    build:
+      dockerfile: Dockerfile
+      context: .
+    image: oms
+    ports:
+    - 8888:80
+    environment:
+      - CELERY_BROKER_URL=redis://redis:6379/2
+      - CELERY_RESULT_BACKEND=redis://redis:6379/2
+    volumes:
+      - $PWD/oms/settings/secrets.json:/webapp/server/oms/settings/secrets.json:ro
+      - $PWD/logs:/webapp/server/logs
+  redis:
+    image: redis
+    expose:
+      - 6379
+  beat:
+    depends_on:
+      - server
+      - redis
+    image: oms
+    environment:
+      - CELERY_BROKER_URL=redis://redis:6379/2
+      - CELERY_RESULT_BACKEND=redis://redis:6379/2
+    volumes:
+      - $PWD/oms/settings/secrets.json:/webapp/server/oms/settings/secrets.json:ro
+      - $PWD/logs:/webapp/server/logs
+    command: celery -A oms.celery beat
+  worker:
+    depends_on:
+      - server
+      - redis
+      - beat
+    image: oms
+    environment:
+      - CELERY_BROKER_URL=redis://redis:6379/2
+      - CELERY_RESULT_BACKEND=redis://redis:6379/2
+    volumes:
+      - $PWD/oms/settings/secrets.json:/webapp/server/oms/settings/secrets.json:ro
+      - $PWD/logs:/webapp/server/logs
+    command: celery -A oms.celery worker

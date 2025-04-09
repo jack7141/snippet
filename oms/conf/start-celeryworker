@@ -1,0 +1,7 @@
+#!/bin/bash
+
+set -o errexit
+set -o pipefail
+set -o nounset
+
+celery -A oms.celery worker -l INFO --autoscale="${CELERY_WORKER_AUTOSCALE_MAX},${CELERY_WORKER_AUTOSCALE_MIN}"

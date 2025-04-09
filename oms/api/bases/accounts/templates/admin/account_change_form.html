@@ -1,0 +1,82 @@
+{% extends 'admin/change_form.html' %}
+{% load i18n %}
+{% load humanize %}
+
+{% block after_related_objects %}
+
+{% endblock %}
+
+{% block submit_buttons_bottom %}
+    {{ block.super }}
+    <fieldset class="module aligned extrapretty wide collapse in">
+        <h2>리밸런싱 시뮬레이션</h2>
+        {% if account_status_exists %}
+            <div class="form-row">
+                <div>
+                    <label>시뮬레이션 실행 시각</label>
+                    <div class="readonly" readonly>{{ account_status_executed_at }} · {{ account_status_executed_at | naturaltime }}</div>
+                    <div class="help">24시간 후 시뮬레이션 내역이 삭제됩니다.</div>
+                </div>
+            </div>
+            <div class="form-row">
+                <label>시뮬레이션 실행 상태</label>
+                <div class="readonly" readonly>{% if account_status_is_succeeded %}완료{% else %}실패{% endif %}</div>
+            </div>
+            {% if account_status_is_succeeded %}
+            <div class="form-row">
+                <div>
+                    <label>리포트</label>
+                    <textarea cols="40" rows="10" class="vLargeTextField" readonly>{{ account_status_rebalancing_simulation_report }}</textarea>
+                </div>
+            </div>
+            <div class="form-row">
+                <div>
+                    <label>계좌 평가액(원)</label>
+                    <div class="readonly" readonly>{{ account_status_base | floatformat:"0" | intcomma }}</div>
+                </div>
+            </div>
+            <div class="form-row">
+                <div>
+                    <label>종목 평가액 합계(원)</label>
+                    <div class="readonly" readonly>{{ account_status_all_shares_value | floatformat:"0" | intcomma }}</div>
+                </div>
+            </div>
+            <div class="form-row">
+                <div>
+                    <label class="required">자동 리밸런싱을 위한 최소 추가 납입액</label>
+                </div>
+            </div>
+            <div class="form-row">
+                <div>
+                    <label>시뮬레이션 실행 시각 기준(원)</label>
+                    <div class="readonly" readonly>{{ account_status_min_deposit_to_rebalance_base | intcomma }}</div>
+                </div>
+            </div>
+            <div class="form-row">
+                <div>
+                    <label>장 시작 기준 종목 평가액 합계 {% widthratio account_status_required_base_margin_to_rebalance 1 100 %}% 상승 시(원)</label>
+                    <div class="readonly" readonly>{{ account_status_min_deposit_to_rebalance_upper | intcomma }}</div>
+                </div>
+            </div>
+            <div class="form-row">
+                <div>
+                    <label>장 시작 기준 종목 평가액 합계 {% widthratio account_status_required_base_margin_to_rebalance 1 100 %}% 하락 시(원)</label>
+                    <div class="readonly" readonly>{{ account_status_min_deposit_to_rebalance_lower | intcomma }}</div>
+                </div>
+            </div>
+            {% else %}
+            <div class="form-row">
+                <label>오류</label>
+                <div class="readonly" readonly>{{ account_status_error }}</div>
+            </div>
+            {% endif %}
+        {% else %}
+        <div class="form-row">
+            리밸런싱 시뮬레이션 내역이 없습니다. 실행 버튼을 클릭해주세요. (소요 시간: 3~10초)
+        </div>
+        {% endif %}
+    </fieldset>
+    <div class="submit-row">
+        <input type="submit" value="리밸런싱 시뮬레이션 실행" name="_simulate_rebalancing"{% if original.strategy_code is None %} disabled{% endif %}>
+    </div>
+{% endblock %}

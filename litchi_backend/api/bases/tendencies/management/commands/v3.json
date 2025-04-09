@@ -1,0 +1,291 @@
+{
+  "questions": [
+    {
+      "no": 1,
+      "question": "투자 (주식, 펀드 등) 경험 기간은 얼마나 되시나요?",
+      "options": [
+        {
+          "answer": "경험없음",
+          "score": 6
+        },
+        {
+          "answer": "6개월 미만",
+          "score": 7
+        },
+        {
+          "answer": "6개월 이상 1년 미만",
+          "score": 8
+        },
+        {
+          "answer": "1년 이상 2년 미만",
+          "score": 9
+        },
+        {
+          "answer": "2년 이상 3년 미만",
+          "score": 10
+        },
+        {
+          "answer": "3년 이상",
+          "score": 10
+        }
+      ]
+    },
+    {
+      "no": 2,
+      "question": "투자경험이 있는 금융상품을 선택해주세요.",
+      "options": [
+        {
+          "answer": "투자경험 없음",
+          "score": 0
+        },
+        {
+          "answer": "예금, CMA, MMF, RP, 국공채 등",
+          "score": 1
+        },
+        {
+          "answer": "채권형펀드, 원금보장형 ELB/DLB, 금융채 등",
+          "score": 2
+        },
+        {
+          "answer": "혼합형펀드, 원금부분보장형 ELS/DLS, 일반회사채",
+          "score": 3
+        },
+        {
+          "answer": "주식, 주식형펀드, 원금비보장형 ELS/DLS, 고위험회사채",
+          "score": 4
+        },
+        {
+          "answer": "파생상품펀드, ELW, 선물•옵션, 주식신용거래 등",
+          "score": 5
+        }
+      ]
+    },
+    {
+      "no": 3,
+      "question": "투자에 대한 태도는 어떠신가요?",
+      "options": [
+        {
+          "answer": "투자수익보다 원금보존이 중요",
+          "score": 18
+        },
+        {
+          "answer": "원금보존보다 투자수익이 중요",
+          "score": 19
+        },
+        {
+          "answer": "위험이 있더라도 높은 투자수익이 중요",
+          "score": 20
+        }
+      ]
+    },
+    {
+      "no": 4,
+      "question": "투자시 손실은 어느정도까지 견딜 수 있나요?",
+      "options": [
+        {
+          "answer": "기대수익이 높다면 위험이 높아도 상관하지 않음",
+          "score": 20
+        },
+        {
+          "answer": "투자원금에서 20~100% 손실을 감내할 수 있음",
+          "score": 19
+        },
+        {
+          "answer": "투자원금에서 20%미만까지는 손실을 감내할 수 있음",
+          "score": 18
+        },
+        {
+          "answer": "투자원금에서 10%미만까지는 손실을 감내할 수 있음",
+          "score": 17
+        },
+        {
+          "answer": "투자원금 보전을 선호함",
+          "score": 16
+        }
+      ]
+    },
+    {
+      "no": 5,
+      "question": "투자 기간을 얼마나 생각하고 있나요?",
+      "options": [
+        {
+          "answer": "6개월 미만",
+          "score": 6
+        },
+        {
+          "answer": "1년 미만",
+          "score": 7
+        },
+        {
+          "answer": "2년 미만",
+          "score": 8
+        },
+        {
+          "answer": "3년 미만",
+          "score": 9
+        },
+        {
+          "answer": "3년 이상",
+          "score": 10
+        }
+      ]
+    },
+    {
+      "no": 6,
+      "question": "연령대는 어떻게 되시나요?",
+      "options": [
+        {
+          "answer": "20대",
+          "score": 8
+        },
+        {
+          "answer": "30대",
+          "score": 10
+        },
+        {
+          "answer": "40대",
+          "score": 9
+        },
+        {
+          "answer": "50대",
+          "score": 6
+        },
+        {
+          "answer": "60대 이상",
+          "score": 4
+        }
+      ]
+    },
+    {
+      "no": 7,
+      "question": "월소득은 어느정도 인가요?",
+      "options": [
+        {
+          "answer": "200만원 이하",
+          "score": 6
+        },
+        {
+          "answer": "400만원 이하",
+          "score": 7
+        },
+        {
+          "answer": "600만원 이하",
+          "score": 8
+        },
+        {
+          "answer": "800만원 이하",
+          "score": 9
+        },
+        {
+          "answer": "1,000만원 이상",
+          "score": 10
+        }
+      ]
+    },
+    {
+      "no": 8,
+      "question": "총 자산에서 금융 자산은 어느 정도인가요?",
+      "options": [
+        {
+          "answer": "5% 이하",
+          "score": 6
+        },
+        {
+          "answer": "10% 이내",
+          "score": 7
+        },
+        {
+          "answer": "20% 이내",
+          "score": 8
+        },
+        {
+          "answer": "30% 이내",
+          "score": 9
+        },
+        {
+          "answer": "30% 초과",
+          "score": 10
+        }
+      ]
+    },
+    {
+      "no": 9,
+      "question": "금융상품을 투자하는 목적을 선택해주세요",
+      "options": [
+        {
+          "answer": "교육비",
+          "score": 1
+        },
+        {
+          "answer": "생활비",
+          "score": 0
+        },
+        {
+          "answer": "결혼자금",
+          "score": 1
+        },
+        {
+          "answer": "채무상환",
+          "score": 0
+        },
+        {
+          "answer": "주택마련자금",
+          "score": 1
+        },
+        {
+          "answer": "자산증식자금",
+          "score": 1
+        }
+      ]
+    },
+    {
+      "no": 10,
+      "question": "금융상품 투자를 위한 금융 지식/이해도는 어느 정도라고 생각하시나요?",
+      "options": [
+        {
+          "answer": "초저위험(CMA, RP 등) 금융상품의 내용만 이해하고 있음",
+          "score": 1
+        },
+        {
+          "answer": "널리 알려진 금융상품(주식, 채권, 펀드 등)의 구조 및 위험 등을 일정 부분 이해하고 있음",
+          "score": 2
+        },
+        {
+          "answer": "널리 알려진 금융상품(주식, 채권, 펀드 등)의 구조 및 위험 등을 깊이 있게 이해하고 있음",
+          "score": 3
+        },
+        {
+          "answer": "파생상품을 포함한 대부분의 금융상품 구조 및 위험 등을 이해하고 있음",
+          "score": 4
+        }
+      ]
+    }
+  ],
+  "score_ranges": [
+    {
+      "start": 0,
+      "end": 68,
+      "risk_type": 0
+    },
+    {
+      "start": 69,
+      "end": 73,
+      "risk_type": 1
+    },
+    {
+      "start": 74,
+      "end": 79,
+      "risk_type": 2
+    },
+    {
+      "start": 80,
+      "end": 85,
+      "risk_type": 3
+    },
+    {
+      "start": 86,
+      "end": 200,
+      "risk_type": 4
+    }
+  ]
+}

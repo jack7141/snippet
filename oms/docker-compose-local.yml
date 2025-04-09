@@ -1,0 +1,49 @@
+version: "3"
+
+services:
+  server:
+    build:
+      dockerfile: ./conf/local/Dockerfile
+      context: .
+    image: oms
+    depends_on:
+      mysql:
+        condition: service_healthy
+    ports:
+    - 8000:8000
+    env_file:
+      - .env
+    volumes:
+      - .:/app
+    command: /start
+
+  mysql:
+    image: mysql:5.7.12
+    container_name: mysql
+    environment:
+      - MYSQL_ROOT_PASSWORD=fount!2022
+      - MYSQL_DATABASE=app_order
+    healthcheck:
+      test: "mysqladmin ping -h 127.0.0.1 -u root --password=$$MYSQL_ROOT_PASSWORD"
+      interval: 5s
+      timeout: 3s
+      retries: 10
+      start_period: 0s
+
+  redis:
+    image: redis
+    expose:
+      - 6379
+
+  worker:
+    depends_on:
+      mysql:
+        condition: service_healthy
+      server:
+        condition: service_started
+      redis:
+        condition: service_started
+    image: oms
+    env_file:
+      - .env
+    command: celery -A oms.celery worker
